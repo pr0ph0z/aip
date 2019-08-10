@@ -2,6 +2,11 @@
     <string name="app_name">MADP-Submission</string>
     <string name="news_title">News Title</string>
     <string name="news_summary">News Summary</string>
+    <string name="news_source">News Source</string>
+    <string name="news_author">News Author - And Time</string>
+    <string name="news_content">
+        Aenean mi lacus, euismod ac libero sit amet, congue porttitor nisl. Nullam iaculis mauris tortor, in sollicitudin lectus interdum vel.\n\nNam lorem augue, molestie eget orci et, convallis ultricies felis. Vivamus ac massa magna. Proin porta in enim at egestas.\n\nCras egestas eros sit amet justo vulputate, at porttitor ante vestibulum. Curabitur eu ante sed sem tincidunt fringilla. Sed et mollis dui.\n\nMauris eget volutpat arcu. Sed molestie ultricies venenatis. Sed quis semper leo. Curabitur a orci nec lorem vestibulum varius.\n\nCurabitur ligula augue, sollicitudin et luctus eget, ultrices eget risus. Duis euismod ligula ante, fermentum elementum nisl dapibus non.\n\n</string>
+    <string name="news_detail_title">This is News Detail Title that not supposed to be here. This is News Detail Title that not supposed to be here.</string>
     <string name="favorite_title">Favorite Animanga Title</string>
     <string name="favorite_rating">Favorite Animanga Rating</string>
 </resources>
