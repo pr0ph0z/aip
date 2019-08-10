@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">MADP-Submission</string>
+    <string name="news_title">News Title</string>
+    <string name="news_summary">News Summary</string>
+    <string name="favorite_title">Favorite Animanga Title</string>
+    <string name="favorite_rating">Favorite Animanga Rating</string>
+</resources>
