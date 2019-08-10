@@ -16,6 +16,11 @@ import androidx.recyclerview.widget.RecyclerView;
 
 public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.NewsViewHolder> {
     private ArrayList<News> listNews;
+    private OnItemClickCallback onItemClickCallback;
+
+    public void setOnItemClickCallback(OnItemClickCallback onItemClickCallback) {
+        this.onItemClickCallback = onItemClickCallback;
+    }
 
     public NewsAdapter(ArrayList<News> list) { this.listNews = list; }
 
@@ -27,7 +32,7 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.NewsViewHolder
     }
 
     @Override
-    public void onBindViewHolder(@NonNull NewsViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull final NewsViewHolder holder, int position) {
         News news = listNews.get(position);
         Glide.with(holder.itemView.getContext())
                 .load("https://vignette.wikia.nocookie.net/hamtaro/images/1/1d/HamtaroN.png/revision/latest/scale-to-width-down/350?cb=20150928215408")
@@ -36,6 +41,14 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.NewsViewHolder
 
         holder.newsTitle.setText(news.getTitle());
         holder.newsSummary.setText(news.getSummary());
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                onItemClickCallback.onItemClicked(listNews.get(holder.getAdapterPosition()));
+            }
+        });
     }
 
     @Override
@@ -54,5 +67,9 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.NewsViewHolder
             newsTitle = itemView.findViewById(R.id.news_title);
             newsSummary = itemView.findViewById(R.id.news_summary);
         }
+    }
+
+    public interface OnItemClickCallback {
+        void onItemClicked(News data);
     }
 }

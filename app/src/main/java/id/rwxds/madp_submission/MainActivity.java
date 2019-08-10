@@ -5,7 +5,9 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;
@@ -37,6 +39,15 @@ public class MainActivity extends AppCompatActivity {
         rvNews.setLayoutManager(horizontalLayout);
         NewsAdapter newsAdapter = new NewsAdapter(newsList);
         rvNews.setAdapter(newsAdapter);
+
+        newsAdapter.setOnItemClickCallback(new NewsAdapter.OnItemClickCallback() {
+            @Override
+            public void onItemClicked(News data) {
+                Intent i = new Intent(MainActivity.this, NewsDetailActivity.class);
+                i.putExtra("data", data);
+                startActivity(i);
+            }
+        });
     }
 
     private void showFavorite() {
