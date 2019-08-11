@@ -13,8 +13,7 @@
 
     <RelativeLayout
         android:layout_width="wrap_content"
-        android:layout_height="250dp"
-        android:padding="8dp">
+        android:layout_height="250dp">
 
         <ImageView
             android:id="@+id/news_image"
@@ -32,6 +31,7 @@
             android:textSize="18sp"
             android:textStyle="bold"
             android:layout_below="@+id/news_image"
+            android:padding="8dp"
             android:text="@string/news_title"/>
 
         <TextView
@@ -39,6 +39,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/news_title"
+            android:padding="8dp"
             android:text="@string/news_summary"/>
 
     </RelativeLayout>
