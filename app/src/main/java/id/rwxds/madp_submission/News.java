@@ -7,6 +7,9 @@ public class News implements Parcelable {
     private String title;
     private String summary;
     private String image;
+    private String content;
+    private String source;
+    private String author;
 
     public News() {
         //
@@ -16,6 +19,9 @@ public class News implements Parcelable {
         title = in.readString();
         summary = in.readString();
         image = in.readString();
+        content = in.readString();
+        source = in.readString();
+        author = in.readString();
     }
 
     public static final Creator<News> CREATOR = new Creator<News>() {
@@ -54,6 +60,18 @@ public class News implements Parcelable {
         this.image = image;
     }
 
+    public String getContent() { return content; }
+
+    public void setContent(String content) { this.content = content; }
+
+    public String getSource() { return source; }
+
+    public void setSource(String source) { this.source = source; }
+
+    public String getAuthor() { return author; }
+
+    public void setAuthor(String author) { this.author = author; }
+
     @Override
     public int describeContents() {
         return 0;
@@ -64,5 +82,8 @@ public class News implements Parcelable {
         parcel.writeString(title);
         parcel.writeString(summary);
         parcel.writeString(image);
+        parcel.writeString(content);
+        parcel.writeString(source);
+        parcel.writeString(author);
     }
 }
