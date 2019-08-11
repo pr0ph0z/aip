@@ -35,8 +35,7 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.NewsViewHolder
     public void onBindViewHolder(@NonNull final NewsViewHolder holder, int position) {
         News news = listNews.get(position);
         Glide.with(holder.itemView.getContext())
-                .load("https://vignette.wikia.nocookie.net/hamtaro/images/1/1d/HamtaroN.png/revision/latest/scale-to-width-down/350?cb=20150928215408")
-                .apply(new RequestOptions().override(55, 55))
+                .load(news.getImage())
                 .into(holder.newsImage);
 
         holder.newsTitle.setText(news.getTitle());
