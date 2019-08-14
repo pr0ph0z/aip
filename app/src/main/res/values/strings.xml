@@ -19,4 +19,10 @@
     <string name="animanga_genres_value">Animanga Genres Value</string>
     <string name="animanga_rating">SCORE</string>
     <string name="animanga_rating_value">9.0</string>
+    <string name="animanga_ranked">RANKED</string>
+    <string name="animanga_ranked_value">#999</string>
+    <string name="animanga_popularity">POPULARITY</string>
+    <string name="animanga_popularity_value">#999</string>
+    <string name="animanga_members">MEMBERS</string>
+    <string name="animanga_members_value">99,999</string>
 </resources>
