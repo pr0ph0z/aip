@@ -71,110 +71,63 @@
             android:text="@string/animanga_genres_value"/>
 
         <TextView
+            style="@style/TvFavoriteScoringTitle"
+            android:layout_marginLeft="12dp"
             android:id="@+id/tv_animanga_rating_title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/img_poster"
             android:text="@string/animanga_rating"
             android:textColor="@android:color/white"
-            android:layout_marginTop="16dp"
-            android:layout_marginLeft="16dp"
-            android:paddingTop="4dp"
-            android:paddingBottom="4dp"
-            android:paddingLeft="8dp"
-            android:paddingRight="8dp"
             android:background="@color/colorPrimary"/>
 
         <TextView
+            style="@style/TvFavoriteScoringValue"
             android:id="@+id/tv_animanga_rating_value"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:layout_below="@id/tv_animanga_rating_title"
             android:text="@string/animanga_rating_value"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            android:gravity="center"
             android:layout_alignLeft="@id/tv_animanga_rating_title"
             android:layout_alignRight="@id/tv_animanga_rating_title"/>
 
         <TextView
+            style="@style/TvFavoriteScoringTitle"
             android:id="@+id/tv_animanga_ranked_title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/img_poster"
-            android:layout_marginTop="16dp"
             android:layout_marginLeft="16dp"
             android:layout_toRightOf="@id/tv_animanga_rating_title"
-            android:text="@string/animanga_ranked"
-            android:paddingTop="4dp"
-            android:paddingBottom="4dp"
-            android:paddingLeft="8dp"
-            android:paddingRight="8dp"/>
+            android:text="@string/animanga_ranked"/>
 
         <TextView
+            style="@style/TvFavoriteScoringValue"
             android:id="@+id/tv_animanga_ranked_value"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:layout_below="@id/tv_animanga_rating_title"
-            android:layout_toRightOf="@id/tv_animanga_rating_value"
             android:text="@string/animanga_ranked_value"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            android:gravity="center"
             android:layout_alignLeft="@id/tv_animanga_ranked_title"
             android:layout_alignRight="@id/tv_animanga_ranked_title"/>
 
         <TextView
+            style="@style/TvFavoriteScoringTitle"
             android:id="@+id/tv_animanga_popularity_title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/img_poster"
-            android:layout_marginTop="16dp"
             android:layout_marginLeft="16dp"
             android:layout_toRightOf="@id/tv_animanga_ranked_title"
-            android:text="@string/animanga_popularity"
-            android:paddingTop="4dp"
-            android:paddingBottom="4dp"
-            android:paddingLeft="8dp"
-            android:paddingRight="8dp"/>
+            android:text="@string/animanga_popularity"/>
 
         <TextView
+            style="@style/TvFavoriteScoringValue"
             android:id="@+id/tv_animanga_popularity_value"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:layout_below="@id/tv_animanga_popularity_title"
-            android:layout_toRightOf="@id/tv_animanga_ranked_value"
             android:text="@string/animanga_ranked_value"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            android:gravity="center"
             android:layout_alignLeft="@id/tv_animanga_popularity_title"
             android:layout_alignRight="@id/tv_animanga_popularity_title"/>
 
         <TextView
+            style="@style/TvFavoriteScoringTitle"
             android:id="@+id/tv_animanga_members_title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/img_poster"
-            android:layout_marginTop="16dp"
             android:layout_marginLeft="16dp"
             android:layout_toRightOf="@id/tv_animanga_popularity_title"
-            android:text="@string/animanga_members"
-            android:paddingTop="4dp"
-            android:paddingBottom="4dp"
-            android:paddingLeft="8dp"
-            android:paddingRight="8dp"/>
+            android:text="@string/animanga_members"/>
 
         <TextView
+            style="@style/TvFavoriteScoringValue"
             android:id="@+id/tv_animanga_members_value"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:layout_below="@id/tv_animanga_members_title"
-            android:layout_toRightOf="@id/tv_animanga_popularity_value"
             android:text="@string/animanga_members_value"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            android:gravity="center"
             android:layout_alignLeft="@id/tv_animanga_members_title"
             android:layout_alignRight="@id/tv_animanga_members_title"/>
 
