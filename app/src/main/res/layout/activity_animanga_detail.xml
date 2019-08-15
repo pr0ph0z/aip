@@ -131,6 +131,23 @@
             android:layout_alignLeft="@id/tv_animanga_members_title"
             android:layout_alignRight="@id/tv_animanga_members_title"/>
 
+        <TextView
+            android:id="@+id/tv_animanga_characters"
+            style="@style/TvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_animanga_rating_value"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:text="@string/animanga_characters" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_news"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:layout_below="@+id/tv_animanga_characters"
+            tools:listitem="@layout/item_characters"/>
+
     </RelativeLayout>
 
 </RelativeLayout>
