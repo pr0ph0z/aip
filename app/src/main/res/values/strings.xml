@@ -27,5 +27,6 @@
     <string name="animanga_members_value">99,999</string>
     <string name="animanga_characters">Characters</string>
     <string name="animanga_character_name">Character Name</string>
+    <string name="animanga_synopsis">Synopsis</string>
 
 </resources>

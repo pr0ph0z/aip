@@ -137,16 +137,35 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/tv_animanga_rating_value"
-            android:layout_marginTop="16dp"
             android:layout_marginBottom="@dimen/activity_vertical_margin"
             android:text="@string/animanga_characters" />
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rv_news"
+            android:id="@+id/rv_characters"
             android:layout_width="match_parent"
             android:layout_height="160dp"
             android:layout_below="@+id/tv_animanga_characters"
             tools:listitem="@layout/item_characters"/>
+
+        <TextView
+            android:id="@+id/tv_animanga_synopsis_title"
+            style="@style/TvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rv_characters"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:text="@string/animanga_synopsis" />
+
+        <TextView
+            android:id="@+id/tv_animanga_synopsis"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_animanga_synopsis_title"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:text="@string/news_content"
+            android:textSize="18sp"
+            android:lineSpacingMultiplier="1"/>
 
     </RelativeLayout>
 
