@@ -7,9 +7,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
@@ -54,5 +52,14 @@ public class MainActivity extends AppCompatActivity {
         rvFavorite.setLayoutManager(new GridLayoutManager(this, 2));
         GridFavoriteAdapter gridFavoriteAdapter = new GridFavoriteAdapter(favoriteList);
         rvFavorite.setAdapter(gridFavoriteAdapter);
+
+        gridFavoriteAdapter.setOnItemClickCallback(new GridFavoriteAdapter.OnItemClickCallback() {
+            @Override
+            public void onItemClicked(Favorite data) {
+                Intent i = new Intent(MainActivity.this, FavoriteDetailActivity.class);
+                i.putExtra("data", data);
+                startActivity(i);
+            }
+        });
     }
 }

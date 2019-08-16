@@ -33,7 +33,7 @@ public class GridFavoriteAdapter extends RecyclerView.Adapter<GridFavoriteAdapte
     }
 
     @Override
-    public void onBindViewHolder(@NonNull GridViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull final GridViewHolder holder, final int position) {
         Favorite favorite = listFavorite.get(position);
         Glide.with(holder.itemView.getContext())
                 .load(favorite.getImage())
@@ -42,6 +42,13 @@ public class GridFavoriteAdapter extends RecyclerView.Adapter<GridFavoriteAdapte
 
         holder.titleFavorite.setText(favorite.getTitle());
         holder.ratingFavorite.setText(favorite.getRating());
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onItemClickCallback.onItemClicked(listFavorite.get(holder.getAdapterPosition()));
+            }
+        });
     }
 
     @Override
@@ -61,7 +68,7 @@ public class GridFavoriteAdapter extends RecyclerView.Adapter<GridFavoriteAdapte
         }
     }
 
-    private interface OnItemClickCallback {
+    public interface OnItemClickCallback {
         void onItemClicked(Favorite data);
     }
 }

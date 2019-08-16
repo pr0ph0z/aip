@@ -12,7 +12,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".AnimangaDetailActivity"></activity>
+        <activity android:name=".FavoriteDetailActivity"></activity>
         <activity android:name=".NewsDetailActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
