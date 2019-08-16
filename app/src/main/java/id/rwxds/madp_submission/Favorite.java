@@ -92,6 +92,10 @@ public class Favorite implements Parcelable {
 
     public void setGenres(String genres) { this.genres = genres; }
 
+    public String getSynopsis() { return synopsis; }
+
+    public void setSynopsis(String synopsis) { this.synopsis = synopsis; }
+
     @Override
     public int describeContents() { return 0; }
 
