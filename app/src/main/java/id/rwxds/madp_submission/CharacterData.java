@@ -1,5 +1,7 @@
 package id.rwxds.madp_submission;
 
+import android.util.Log;
+
 import java.util.ArrayList;
 
 public class CharacterData {
@@ -16,13 +18,16 @@ public class CharacterData {
                     "Sabito|https://cdn.myanimelist.net/images/characters/9/382212.jpg",
                     "Sakonji Urokodaki|https://cdn.myanimelist.net/images/characters/11/382214.jpg",
                     "Makomo|https://cdn.myanimelist.net/images/characters/7/382213.jpg"
+            },
+            {
+                "",
             }
     };
 
     public static ArrayList<Character> getListData(String title) {
         ArrayList<Character> list = new ArrayList<>();
         for(String[] characters : data) {
-            if (characters[0] == title) {
+            if (characters[0].equals(title)) {
                 for(int i=1; i<characters.length; i++) {
                     String name = characters[i].split("\\|")[0];
                     String image = characters[i].split("\\|")[1];
