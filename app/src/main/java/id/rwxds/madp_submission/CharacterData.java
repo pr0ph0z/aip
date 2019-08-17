@@ -22,15 +22,17 @@ public class CharacterData {
     public static ArrayList<Character> getListData(String title) {
         ArrayList<Character> list = new ArrayList<>();
         for(String[] characters : data) {
-            for(int i=1; i<characters.length; i++) {
-                String name = characters[i].split("\\|")[0];
-                String image = characters[i].split("\\|")[1];
+            if (characters[0] == title) {
+                for(int i=1; i<characters.length; i++) {
+                    String name = characters[i].split("\\|")[0];
+                    String image = characters[i].split("\\|")[1];
 
-                Character character = new Character();
-                character.setName(name);
-                character.setImage(image);
+                    Character character = new Character();
+                    character.setName(name);
+                    character.setImage(image);
 
-                list.add(character);
+                    list.add(character);
+                }
             }
         }
 
