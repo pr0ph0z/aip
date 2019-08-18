@@ -7,6 +7,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 
 import java.util.ArrayList;
 
@@ -15,6 +17,8 @@ public class MainActivity extends AppCompatActivity {
     private RecyclerView rvNews, rvFavorite;
     private ArrayList<News> newsList = new ArrayList<>();
     private ArrayList<Favorite> favoriteList = new ArrayList<>();
+
+    private Menu menu;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +34,36 @@ public class MainActivity extends AppCompatActivity {
         favoriteList.addAll(FavoriteData.getListData());
         showNews();
         showFavorite();
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        this.menu = menu;
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        setView(item.getItemId());
+        return super.onOptionsItemSelected(item);
+    }
+
+    public void setView(int selectedView) {
+        MenuItem listView = this.menu.findItem(R.id.list_view);
+        MenuItem gridView = this.menu.findItem(R.id.grid_view);
+
+        switch (selectedView) {
+            case R.id.list_view:
+                listView.setVisible(false);
+                gridView.setVisible(true);
+                break;
+
+            case R.id.grid_view:
+                listView.setVisible(true);
+                gridView.setVisible(false);
+                break;
+        }
     }
 
     private void showNews() {

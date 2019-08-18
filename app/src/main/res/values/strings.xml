@@ -9,6 +9,7 @@
     <string name="news_detail_title">This is News Detail Title that not supposed to be here. This is News Detail Title that not supposed to be here.</string>
     <string name="favorite_title">Favorite Animanga Title</string>
     <string name="favorite_rating">Favorite Animanga Rating</string>
+    <string name="favorite_description">Favorite Animanga Description</string>
     <string name="animanga_title">Title:</string>
     <string name="animanga_title_value">Animanga Title Value</string>
     <string name="animanga_type">Type:</string>
