@@ -57,11 +57,13 @@ public class MainActivity extends AppCompatActivity {
             case R.id.list_view:
                 listView.setVisible(false);
                 gridView.setVisible(true);
+                showFavoriteCard();
                 break;
 
             case R.id.grid_view:
                 listView.setVisible(true);
                 gridView.setVisible(false);
+                showFavorite();
                 break;
         }
     }
@@ -88,6 +90,21 @@ public class MainActivity extends AppCompatActivity {
         rvFavorite.setAdapter(gridFavoriteAdapter);
 
         gridFavoriteAdapter.setOnItemClickCallback(new GridFavoriteAdapter.OnItemClickCallback() {
+            @Override
+            public void onItemClicked(Favorite data) {
+                Intent i = new Intent(MainActivity.this, FavoriteDetailActivity.class);
+                i.putExtra("data", data);
+                startActivity(i);
+            }
+        });
+    }
+
+    private void showFavoriteCard() {
+        rvFavorite.setLayoutManager(new LinearLayoutManager(this));
+        FavoriteCardviewAdapter favoriteCardviewAdapter = new FavoriteCardviewAdapter(favoriteList);
+        rvFavorite.setAdapter(favoriteCardviewAdapter);
+
+        favoriteCardviewAdapter.setOnItemClickCallback(new FavoriteCardviewAdapter.OnItemClickCallback() {
             @Override
             public void onItemClicked(Favorite data) {
                 Intent i = new Intent(MainActivity.this, FavoriteDetailActivity.class);
